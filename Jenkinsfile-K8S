@@ -14,7 +14,7 @@ node {
     stage ('Docker Build') {
      // Build and push image with Jenkins' docker-plugin
     withDockerServer([uri: "tcp://localhost:4243"]) {
-        withDockerRegistry([credentialsId: "dockerhub", url: "https://index.docker.io/v1/"]) {
+        withDockerRegistry([credentialsId: "f55dbf94-8bd4-49bc-9935-693baaa58832", url: "https://index.docker.io/v1/"]) {
         image = docker.build("sureshtamizan/myspringbootapp", "MyAwesomeApp")
         image.push()    
         }
