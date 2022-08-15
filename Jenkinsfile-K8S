@@ -23,7 +23,7 @@ node {
     
     stage ('Kubernetes Deploy') {
         kubernetesDeploy(
-            configs: 'MyAwesomeApp/springboot-docker-hub.yml',
+            configs: 'MyAwesomeApp/springboot-docker-hub.yaml',
             kubeconfigId: 'k8s',
             enableConfigSubstitution: true
             )
